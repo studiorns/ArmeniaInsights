@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Metrics Guide for CMO - Armenia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4285f4;
+            --primary-light: #1a2233;
+            --primary-dark: #8ab4f8;
+            --secondary: #34a853;
+            --secondary-light: #1a2a1e;
+            --warning: #fbbc04;
+            --warning-light: #332a1a;
+            --danger: #ea4335;
+            --danger-light: #331f1e;
+            --gray-100: #1e1e1e;
+            --gray-200: #2d2d2d;
+            --gray-300: #3d3d3d;
+            --gray-400: #4d4d4d;
+            --gray-500: #777777;
+            --gray-600: #a0a0a0;
+            --gray-700: #c0c0c0;
+            --gray-800: #e0e0e0;
+            --gray-900: #f0f0f0;
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+            --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.5);
+            --shadow-lg: 0 15px 25px rgba(0, 0, 0, 0.6);
+            --radius-sm: 4px;
+            --radius: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-800);
+            background-color: var(--gray-100);
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 40px 0;
+            margin-bottom: 40px;
+        }
+        
+        header .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem;
+            color: var(--gray-800);
+        }
+        
+        h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.2rem 0 0.8rem;
+            color: var(--gray-800);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--gray-800);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+        }
+        
+        .card {
+            background-color: var(--gray-200);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            box-shadow: var(--shadow);
+            transform: translateY(-2px);
+        }
+        
+        .metric-card {
+            background-color: var(--gray-200);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .metric-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .metric-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin: 0;
+        }
+        
+        .metric-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            background-color: var(--primary-light);
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+        
+        .metric-description {
+            margin-bottom: 15px;
+            color: var(--gray-700);
+        }
+        
+        .calculation {
+            background-color: var(--gray-100);
+            padding: 15px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 15px;
+            border-left: 3px solid var(--gray-400);
+        }
+        
+        .calculation h5 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: var(--gray-800);
+        }
+        
+        .interpretation {
+            margin-bottom: 15px;
+        }
+        
+        .interpretation h5 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: var(--gray-800);
+        }
+        
+        .interpretation ul {
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .business-implications {
+            background-color: var(--secondary-light);
+            padding: 15px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 15px;
+            border-left: 3px solid var(--secondary);
+        }
+        
+        .business-implications h5 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+        
+        .business-implications ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        
+        .business-implications li {
+            margin-bottom: 8px;
+        }
+        
+        .business-implications li:last-child {
+            margin-bottom: 0;
+        }
+        
+        .example {
+            background-color: var(--warning-light);
+            padding: 15px;
+            border-radius: var(--radius-sm);
+            margin-bottom: 15px;
+            border-left: 3px solid var(--warning);
+        }
+        
+        .example h5 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #d68000;
+        }
+        
+        .section-intro {
+            background-color: var(--primary-light);
+            padding: 20px;
+            border-radius: var(--radius);
+            margin-bottom: 30px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .section-intro p {
+            margin-bottom: 0;
+        }
+        
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.3rem;
+            }
+            
+            .card, .metric-card {
+                padding: 20px;
+            }
+            
+            .metric-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .metric-value {
+                align-self: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Armenia Market Metrics & Insights</h1>
+            <p class="subtitle">Market Analysis and Performance Indicators</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="card">
+            <h2>Introduction</h2>
+            <p>This guide provides detailed explanations of the key metrics and insights used in our market analysis dashboards. It is designed to help decision-makers understand the technical aspects of our market performance indicators and their business implications.</p>
+            <p>Each metric is explained in terms of:</p>
+            <ul>
+                <li>What it measures</li>
+                <li>How it's calculated</li>
+                <li>How to interpret different values</li>
+                <li>Business implications and actionable insights</li>
+                <li>Practical examples where applicable</li>
+            </ul>
+            <p>The metrics are organized into categories that align with our dashboard structure, making it easy to reference when reviewing market performance.</p>
+        </div>
+        
+        <h2>Brand Health Metrics</h2>
+        <div class="section-intro">
+            <p>Brand health metrics measure consumer perceptions and attitudes toward our destination. These metrics are leading indicators that typically precede changes in actual travel behavior.</p>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-header">
+                <h3 class="metric-title">Awareness</h3>
+                <div class="metric-value">36.27% (T2 market)</div>
+            </div>
+            <p class="metric-description">Awareness measures the percentage of the target audience who are aware of Abu Dhabi as a Cultural and Sea & Sun travel destination.</p>
+            
+            <div class="calculation">
+                <h5>How It's Calculated:</h5>
+                <p>Based on survey responses to questions like "Which international holiday destinations offering a combination of both cultural and sun & beach activities are you aware of?" The percentage represents those who respond positively out of the total surveyed population.</p>
+            </div>
+            
+            <div class="interpretation">
+                <h5>Interpretation:</h5>
+                <ul>
+                    <li><strong>90%+</strong>: Excellent awareness, approaching market saturation</li>
+                    <li><strong>70-90%</strong>: Strong awareness, but room for improvement</li>
+                    <li><strong>50-70%</strong>: Moderate awareness, significant opportunity for growth</li>
+                    <li><strong>&lt;50%</strong>: Low awareness, major opportunity but requires substantial investment</li>
+                </ul>
+            </div>
+            
+            <div class="business-implications">
+                <h5>Business Implications:</h5>
+                <ul>
+                    <li>At 36.27%, Armenia has low awareness of Abu Dhabi, which is expected for a T2 market with recent implementation.</li>
+                    <li>This low awareness represents a significant opportunity for growth through targeted awareness-building campaigns.</li>
+                    <li>The low baseline means that even modest marketing investments can potentially yield substantial percentage increases.</li>
+                    <li>Marketing should focus primarily on awareness-building efforts as the foundation for improving consideration and intent.</li>
+                    <li>Given the early stage of market development, awareness campaigns should emphasize Abu Dhabi's unique selling propositions and differentiators from competing destinations.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-header">
+                <h3 class="metric-title">Consideration</h3>
+                <div class="metric-value">18.61% (growing)</div>
+            </div>
+            <p class="metric-description">Consideration measures the percentage of aware consumers who would consider travelling to Abu Dhabi in the next 3 years.</p>
+            
+            <div class="calculation">
+                <h5>How It's Calculated:</h5>
+                <p>Based on survey responses to questions like "Which of the below holiday destinations would you like to visit in the next 3 years?" The percentage represents those who respond positively out of those who are aware of Abu Dhabi.</p>
+            </div>
+            
+            <div class="interpretation">
+                <h5>Interpretation:</h5>
+                <ul>
+                    <li><strong>70%+</strong>: Excellent consideration, strong position in consumer mindset</li>
+                    <li><strong>50-70%</strong>: Good consideration, competitive position</li>
+                    <li><strong>30-50%</strong>: Moderate consideration, significant barriers exist</li>
+                    <li><strong>&lt;30%</strong>: Low consideration, major perception issues to address</li>
+                </ul>
+            </div>
+            
+            <div class="business-implications">
+                <h5>Business Implications:</h5>
+                <ul>
+                    <li>At 18.61%, consideration is in the low range, indicating significant barriers to conversion from awareness to consideration.</li>
+                    <li>This suggests a need for marketing that specifically addresses the barriers to consideration, particularly the preference for other destinations (74%).</li>
+                    <li>The gap between awareness (36.27%) and consideration (18.61%) is proportionally smaller than in more established markets, suggesting that those who are aware of Abu Dhabi are relatively receptive to considering it.</li>
+                    <li>Marketing should focus on highlighting unique experiences and differentiators that address the perception that "there are other places I would rather visit" (74%).</li>
+                    <li>The low consideration rate indicates a need for targeted messaging that showcases the variety of activities and experiences available in Abu Dhabi to counter the perception that "there is not much to do there" (27%).</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-header">
+                <h3 class="metric-title">Intent</h3>
+                <div class="metric-value">12.52% (modest)</div>
+            </div>
+            <p class="metric-description">Intent measures the percentage of considering consumers who intend to visit Abu Dhabi in the next 12 months.</p>
+            
+            <div class="calculation">
+                <h5>How It's Calculated:</h5>
+                <p>Based on survey responses to questions like "Which of the below holiday destinations are you likely to visit in the next 12 months?" The percentage represents those who respond positively out of those who are considering Abu Dhabi.</p>
+            </div>
+            
+            <div class="interpretation">
+                <h5>Interpretation:</h5>
+                <ul>
+                    <li><strong>50%+</strong>: Excellent intent, very strong conversion potential</li>
+                    <li><strong>30-50%</strong>: Good intent, healthy conversion potential</li>
+                    <li><strong>20-30%</strong>: Moderate intent, conversion challenges exist</li>
+                    <li><strong>&lt;20%</strong>: Low intent, significant conversion barriers</li>
+                </ul>
+            </div>
+            
+            <div class="business-implications">
+                <h5>Business Implications:</h5>
+                <ul>
+                    <li>At 12.52%, intent is in the low range, indicating significant barriers to conversion from consideration to intent.</li>
+                    <li>This suggests that even among those who consider Abu Dhabi, relatively few have immediate plans to visit.</li>
+                    <li>Marketing should focus on creating urgency and addressing practical barriers to booking, such as safety concerns (18%) and the perception of no direct flights (17%).</li>
+                    <li>The low intent level suggests that tactical, conversion-focused campaigns are needed to move consumers from consideration to actual booking.</li>
+                    <li>Given the 42-day average lead time for Armenian travelers, conversion campaigns should be timed approximately 6 weeks before target travel periods.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-header">
+                <h3 class="metric-title">Intent/Consideration Ratio</h3>
+                <div class="metric-value">0.67 (strong)</div>
+            </div>
+            <p class="metric-description">This ratio measures the efficiency of converting consideration to intent, indicating how effectively we move consumers down the funnel.</p>
+            
+            <div class="calculation">
+                <h5>How It's Calculated:</h5>
+                <p>Intent percentage divided by Consideration percentage. For example: 12.52% ÷ 18.61% = 0.67</p>
+            </div>
+            
+            <div class="interpretation">
+                <h5>Interpretation:</h5>
+                <ul>
+                    <li><strong>0.8+</strong>: Excellent conversion efficiency, minimal drop-off</li>
+                    <li><strong>0.6-0.8</strong>: Good conversion efficiency</li>
+                    <li><strong>0.4-0.6</strong>: Moderate conversion efficiency, significant drop-off</li>
+                    <li><strong>&lt;0.4</strong>: Poor conversion efficiency, major funnel leakage</li>
+                </ul>
+            </div>
+            
+            <div class="business-implications">
+                <h5>Business Implications:</h5>
+                <ul>
+                    <li>At 0.67, the conversion from consideration to intent is good, indicating that 67% of those who consider Abu Dhabi intend to visit in the next 12 months.</li>
+                    <li>This strong ratio is particularly notable for a T2 market with recent implementation.</li>
+                    <li>The ratio is comparable to the UK (0.67) and higher than markets like Italy (0.55) and France (0.58), suggesting efficient conversion once consumers consider Abu Dhabi.</li>
+                    <li>This indicates that marketing efforts should focus on increasing awareness and consideration, as the conversion to intent is already relatively efficient.</li>
+                    <li>The strong ratio suggests that Armenian travelers who consider Abu Dhabi are relatively committed to visiting, making them a valuable audience for targeted marketing.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>Market Characteristics</h2>
+        <div class="section-intro">
+            <p>Market characteristics describe fundamental travel behaviors and patterns specific to the Armenia market. These metrics help inform tactical marketing decisions and campaign timing.</p>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-header">
+                <h3 class="metric-title">Average Length of Stay</h3>
+                <div class="metric-value">4.3 days</div>
+            </div>
+            <p class="metric-description">The average number of nights Armenian travelers spend in Abu Dhabi per visit.</p>
+            
+            <div class="calculation">
+                <h5>How It's Calculated:</h5>
+                <p>Based on hotel guest data and visitor surveys (DVS), calculated as the sum of all nights stayed divided by the number of visitors.</p>
+            </div>
+            
+            <div class="business-implications">
+                <h5>Business Implications:</h5>
+                <ul>
+                    <li>The 4.3-day average stay indicates a medium-length vacation timeframe, similar to European markets.</li>
+                    <li>This suggests marketing should focus on compact but comprehensive itineraries and experiences that can be enjoyed within a 4-5 day timeframe.</li>
+                    <li>Package offerings should be designed around this timeframe to maximize appeal.</li>
+                    <li>There's an opportunity to develop 4-5 day itineraries that showcase a variety of experiences across Abu Dhabi.</li>
+                    <li>Hotel partners should be encouraged to develop packages with value-added benefits for stays of 4-5 days.</li>
+                    <li>The medium-length stay suggests a need for high-impact experiences that deliver maximum value in a limited time.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-header">
+                <h3 class="metric-title">Booking Window</h3>
+                <div class="metric-value">42 days</div>
+            </div>
+            <p class="metric-description">The average time between booking and arrival for Armenian travelers visiting Abu Dhabi.</p>
+            
+            <div class="calculation">
+                <h5>How It's Calculated:</h5>
+                <p>Based on booking data from hotels, flight booking engines and OTAs, calculated as the average number of days between booking confirmation and arrival date.</p>
+            </div>
+            
+            <div class="business-implications">
+                <h5>Business Implications:</h5>
+                <ul>
+                    <li>The 42-day booking window is moderate, shorter than established European markets (UK: 70 days, Italy: 74 days) but longer than Middle Eastern markets (Saudi Arabia: 24 days, Kuwait: 27 days).</li>
+                    <li>Marketing campaigns should be timed to run approximately 6 weeks before target travel periods.</li>
+                    <li>This window allows for some considered decision-making but suggests a relatively quick conversion from interest to booking.</li>
+                    <li>Early booking incentives may be effective but should be offered within a reasonable timeframe (e.g., 50+ days in advance).</li>
+                    <li>The moderate booking window suggests that digital media may be more effective than traditional media, as there is limited time for consumers to respond to marketing messages.</li>
+                    <li>This planning period provides some opportunity for upselling and package enhancements, but the process should be streamlined given the shorter timeframe.</li>
+                </ul>
+            </div>
+            
+            <div class="example">
+                <h5>Strategic Example:</h5>
+                <p>For the July-August peak season, major campaign pushes should begin in May-June to align with the 42-day booking window. Early booking discounts offered 50+ days in advance could be effective for this market, encouraging slightly earlier commitments while still respecting their planning cycle.</p>
+            </div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-header">
+                <h3 class="metric-title">Peak Months (Hotel Guests)</h3>
+                <div class="metric-value">July & August</div>
+            </div>
+            <p class="metric-description">The months with the highest volume of Armenian hotel guests in Abu Dhabi.</p>
+            
+            <div class="calculation">
+                <h5>How It's Calculated:</h5>
+                <p>Based on hotel occupancy data, identifying the months with the highest number of Armenian guests.</p>
+            </div>
+            
+            <div class="business-implications">
+                <h5>Business Implications:</h5>
+                <ul>
+                    <li>August 2024 showed the highest number of hotel guests (4,724), a 254% increase from August 2023.</li>
+                    <li>September 2024 also showed strong performance with 4,685 guests (+231% YoY).</li>
+                    <li>This summer peak aligns with typical vacation periods for Armenian travelers.</li>
+                    <li>Marketing should ensure sufficient inventory and capacity during these months.</li>
+                    <li>Pricing strategies can be optimized for these high-demand periods.</li>
+                    <li>There's an opportunity to develop shoulder season campaigns (May-June, September-October) to extend the peak period.</li>
+                    <li>The significant growth in hotel guests in 2024 (+125% YoY) demonstrates the market's potential despite its T2 classification.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>Advanced Statistical Metrics</h2>
+        <div class="section-intro">
+            <p>These advanced metrics provide deeper insights into market dynamics, helping to quantify relationships between marketing activities and outcomes, forecast accuracy, and market behavior patterns.</p>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-header">
+                <h3 class="metric-title">Seasonality Index</h3>
+                <div class="metric-value">1.8 (high seasonal variation)</div>
+            </div>
+            <p class="metric-description">A statistical measure that quantifies the degree of seasonal variation in the Armenia travel market data.</p>
+            
+            <div class="calculation">
+                <h5>How It's Calculated:</h5>
+                <p>Typically calculated by dividing the highest monthly value by the average monthly value in a year. For Armenia, the seasonality index is derived from the 2023-2024 monthly distribution pattern, with July and August showing the highest values (seasonality indices of 1.25 and 1.35 respectively).</p>
+            </div>
+            
+            <div class="interpretation">
+                <h5>Interpretation:</h5>
+                <ul>
+                    <li><strong>1.0-1.3</strong>: Low seasonal variation (relatively flat demand throughout the year)</li>
+                    <li><strong>1.3-1.6</strong>: Moderate seasonal variation (noticeable peaks and troughs)</li>
+                    <li><strong>1.6-2.0</strong>: High seasonal variation (significant peaks and troughs)</li>
+                    <li><strong>2.0+</strong>: Extreme seasonal variation (very pronounced peaks and low seasons)</li>
+                </ul>
+            </div>
+            
+            <div class="business-implications">
+                <h5>Business Implications:</h5>
+                <ul>
+                    <li>The 1.8 value indicates that the market has high seasonal fluctuations, with peak months having about 80% higher travel query activity than the average month.</li>
+                    <li>This is significant enough to warrant strong seasonal marketing strategies.</li>
+                    <li>Marketing efforts should be concentrated before peak periods (considering the 42-day booking window).</li>
+                    <li>There's also opportunity to grow travel interest during off-peak months through targeted campaigns.</li>
+                    <li>Resource allocation should follow this seasonal pattern, with increased investment before peak periods.</li>
+                    <li>The high seasonality suggests a need for differential pricing and promotion strategies across the year.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-header">
+                <h3 class="metric-title">Media Elasticity</h3>
+                <div class="metric-value">0.15 (moderate impact)</div>
+            </div>
+            <p class="metric-description">A marketing metric that measures how responsive travel queries are to changes in media impressions for the Armenia market.</p>
+            
+            <div class="calculation">
+                <h5>How It's Calculated:</h5>
+                <p>Calculated using regression analysis on historical data, comparing the percentage change in travel queries to the percentage change in media impressions over time.</p>
+                <p><strong>Formula:</strong> Media Elasticity = % Change in Travel Queries ÷ % Change in Media Impressions</p>
+            </div>
+            
+            <div class="interpretation">
+                <h5>Interpretation:</h5>
+                <ul>
+                    <li><strong>&lt;0.3</strong>: Low impact (minimal response to media investment)</li>
+                    <li><strong>0.3-0.6</strong>: Moderate impact (reasonable response to media investment)</li>
+                    <li><strong>0.6-1.0</strong>: High impact (strong response to media investment)</li>
+                    <li><strong>&gt;1.0</strong>: Very high impact (exceptional response to media investment)</li>
+                </ul>
+            </div>
+            
+            <div class="business-implications">
+                <h5>Business Implications:</h5>
+                <ul>
+                    <li>The 0.15 elasticity means that for every 10% increase in media impressions, travel queries increase by approximately 1.5%.</li>
+                    <li>This indicates that media investments drive travel queries with low to moderate efficiency.</li>
+                    <li>The relationship is positive but not particularly strong (less than 0.3).</li>
+                    <li>Media campaigns will generate positive ROI but with modest efficiency.</li>
+                    <li>Doubling media spend will not double travel queries, but will produce modest growth.</li>
+                    <li>The low elasticity is expected for a T2 market with recent implementation and low brand awareness.</li>
+                    <li>This modest responsiveness suggests that media investments should be complemented by other marketing approaches, such as addressing specific barriers to visitation and building brand awareness through multiple channels.</li>
+                </ul>
+            </div>
+            
+            <div class="example">
+                <h5>Strategic Example:</h5>
+                <p>If you're planning to increase media impressions by 20% for a campaign targeting the July-August peak season, you can expect approximately a 3% increase in travel queries (20% × 0.15 = 3%). This helps set realistic expectations for campaign performance and ROI calculations, particularly for this emerging market.</p>
+            </div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-header">
+                <h3 class="metric-title">YoY Growth Consistency</h3>
+                <div class="metric-value">0.58 (moderate consistency)</div>
+            </div>
+            <p class="metric-description">A statistical measure that evaluates how uniform or predictable the year-over-year growth patterns are for the Armenia travel market.</p>
+            
+            <div class="calculation">
+                <h5>How It's Calculated:</h5>
+                <p>Typically calculated using a statistical measure like the coefficient of variation (inverse) or correlation coefficient of YoY growth rates across different time periods. The scale ranges from 0 to 1, where 0 represents completely inconsistent growth (highly volatile) and 1 represents perfectly consistent growth (same growth rate across all periods).</p>
+            </div>
+            
+            <div class="interpretation">
+                <h5>Interpretation:</h5>
+                <ul>
+                    <li><strong>&lt;0.5</strong>: Low consistency (high volatility, unpredictable patterns)</li>
+                    <li><strong>0.5-0.7</strong>: Moderate consistency (some predictability with variations)</li>
+                    <li><strong>0.7-0.9</strong>: High consistency (reliable patterns with minor variations)</li>
+                    <li><strong>&gt;0.9</strong>: Very high consistency (highly predictable patterns)</li>
+                </ul>
+            </div>
+            
+            <div class="business-implications">
+                <h5>Business Implications:</h5>
+                <ul>
+                    <li>The 0.58 consistency indicates that there is moderate predictability in how the market behaves year-over-year.</li>
+                    <li>Forecasting can be done with reasonable confidence, but should account for potential variations.</li>
+                    <li>The moderate consistency is expected for a T2 market with limited historical data.</li>
+                    <li>Marketing plans should include some flexibility to adapt to potential growth rate fluctuations.</li>
+                    <li>Budget allocations should include contingency plans for both higher and lower than expected growth scenarios.</li>
+                    <li>This level of consistency suggests that while trends are somewhat predictable, the market is still developing its patterns.</li>
+                    <li>Monitoring growth patterns closely over the next 12-24 months will be important to identify if consistency improves as the market matures.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-header">
+                <h3 class="metric-title">Forecast Confidence Interval</h3>
+                <div class="metric-value">±12.5%</div>
+            </div>
+            <p class="metric-description">A statistical measure indicating the range within which we expect the actual 2025 travel query values to fall with a certain level of confidence (typically 95%).</p>
+            
+            <div class="calculation">
+                <h5>How It's Calculated:</h5>
+                <p>Derived from statistical analysis of historical forecast accuracy, market volatility, and model parameters. It represents the standard error of the forecast multiplied by a factor corresponding to the desired confidence level (typically 1.96 for 95% confidence).</p>
+            </div>
+            
+            <div class="interpretation">
+                <h5>Interpretation:</h5>
+                <ul>
+                    <li><strong>&lt;5%</strong>: Very high forecast precision, highly reliable predictions</li>
+                    <li><strong>5-10%</strong>: Good forecast precision, reliable predictions with moderate variance</li>
+                    <li><strong>10-15%</strong>: Moderate forecast precision, usable predictions with significant variance</li>
+                    <li><strong>&gt;15%</strong>: Low forecast precision, high uncertainty in predictions</li>
+                </ul>
+            </div>
+            
+            <div class="business-implications">
+                <h5>Business Implications:</h5>
+                <ul>
+                    <li>The ±12.5% confidence interval means that if we forecast a travel query index of 7.30 for a particular month, the actual value is expected to fall between 6.39 and 8.21 with 95% confidence.</li>
+                    <li>This moderate interval width reflects the limited historical data available for the Armenia market as a T2 market with recent implementation.</li>
+                    <li>Marketing teams should plan with appropriate contingencies, knowing the potential range of outcomes.</li>
+                    <li>Budget allocations should include flexibility to adjust based on actual performance within this range.</li>
+                    <li>The moderate confidence interval suggests that forecasts should be used as directional guidance rather than precise predictions, particularly for this emerging market.</li>
+                </ul>
+            </div>
+            
+            <div class="example">
+                <h5>Strategic Example:</h5>
+                <p>When planning media budgets for July 2025 based on a forecast of 9.93 travel queries (Moderate scenario), you should prepare for scenarios where the actual value could range from 8.69 to 11.17. This might mean having contingency plans for both underperformance and overperformance within this range, particularly important for a market with limited historical data.</p>
+            </div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-header">
+                <h3 class="metric-title">Impression Efficiency</h3>
+                <div class="metric-value">0.42 queries per 1000 impressions</div>
+            </div>
+            <p class="metric-description">Measures how efficiently media impressions generate travel queries, indicating the effectiveness of our creative content and targeting.</p>
+            
+            <div class="calculation">
+                <h5>How It's Calculated:</h5>
+                <p>Total travel queries divided by total impressions (in thousands) over a specific time period.</p>
+                <p><strong>Formula:</strong> Impression Efficiency = Travel Queries ÷ (Impressions ÷ 1000)</p>
+            </div>
+            
+            <div class="interpretation">
+                <h5>Interpretation:</h5>
+                <ul>
+                    <li><strong>&lt;0.5</strong>: Low efficiency, poor conversion of impressions to queries</li>
+                    <li><strong>0.5-0.8</strong>: Moderate efficiency, reasonable conversion of impressions</li>
+                    <li><strong>0.8-1.2</strong>: Good efficiency, strong conversion of impressions</li>
+                    <li><strong>&gt;1.2</strong>: Excellent efficiency, very strong conversion of impressions</li>
+                </ul>
+            </div>
+            
+            <div class="business-implications">
+                <h5>Business Implications:</h5>
+                <ul>
+                    <li>At 0.42 queries per 1000 impressions, the Armenia market shows low to moderate efficiency in converting media exposure to actual travel interest.</li>
+                    <li>This is expected for a T2 market with low baseline awareness (36.27%).</li>
+                    <li>Marketing should focus on improving creative content and targeting to enhance this efficiency.</li>
+                    <li>A/B testing different creative approaches could help identify more effective messaging for this specific market.</li>
+                    <li>Audience segmentation and precise targeting should be refined to improve conversion rates.</li>
+                    <li>Monitoring this metric over time will be crucial to identify if efficiency improves as the market matures and awareness increases.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>Barriers to Visitation</h2>
+        <div class="section-intro">
+            <p>Understanding why potential visitors choose not to travel to Abu Dhabi is crucial for developing targeted marketing strategies that address specific concerns and misconceptions.</p>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-header">
+                <h3 class="metric-title">Top Barriers to Visit</h3>
+                <div class="metric-value">5 key factors</div>
+            </div>
+            <p class="metric-description">The primary reasons Armenian travelers give for not considering Abu Dhabi as a travel destination, based on survey research.</p>
+            
+            <div class="calculation">
+                <h5>How It's Calculated:</h5>
+                <p>Based on survey responses to questions like "What are the main reasons you would not consider traveling to Abu Dhabi?" The percentages represent the proportion of respondents who selected each reason.</p>
+            </div>
+            
+            <div class="interpretation">
+                <h5>Current Barriers (Q4 2024):</h5>
+                <ul>
+                    <li><strong>Preference for Other Destinations</strong>: 74% (+2pp) would rather visit other places</li>
+                    <li><strong>Not Much to Do</strong>: 27% (-2pp) believe there's not much to do there</li>
+                    <li><strong>It is not a safe place</strong>: 18% (+3pp) have safety concerns</li>
+                    <li><strong>Already Visited</strong>: 17% (+2pp) have already been to Abu Dhabi</li>
+                    <li><strong>No Direct Flights</strong>: 17% (+2pp) concerned about lack of direct flights</li>
+                </ul>
+            </div>
+            
+            <div class="business-implications">
+                <h5>Business Implications:</h5>
+                <ul>
+                    <li><strong>Preference for Other Destinations (74%, +2pp)</strong>: The high percentage indicates strong competition from other destinations. Marketing should focus on unique differentiators and experiences that can't be found elsewhere, particularly highlighting Abu Dhabi's blend of cultural heritage and modern attractions.</li>
+                    <li><strong>Not Much to Do (27%, -2pp)</strong>: The slight decrease is positive but still represents a significant barrier. Marketing should showcase the variety of activities and experiences available, particularly those that would appeal to Armenian travelers based on their demonstrated interests.</li>
+                    <li><strong>Safety Concerns (18%, +3pp)</strong>: The increase in safety concerns is concerning and should be addressed through content that highlights Abu Dhabi's status as one of the safest cities in the world, with specific safety metrics and testimonials.</li>
+                    <li><strong>Already Visited (17%, +2pp)</strong>: The increase suggests growing visitation from Armenia, which is positive. Marketing should highlight new attractions and experiences to encourage repeat visits.</li>
+                    <li><strong>No Direct Flights (17%, +2pp)</strong>: The perception of limited connectivity should be addressed by highlighting available flight options and convenient connections through major hubs.</li>
+                </ul>
+            </div>
+            
+            <div class="example">
+                <h5>Strategic Recommendation:</h5>
+                <p>Based on these barriers, a "Unique Abu Dhabi" campaign addressing the preference for other destinations (74%) combined with an "Activities & Experiences" campaign targeting the perception that there's not much to do (27%) would address the two most significant barriers to visitation from the Armenia market. These should be complemented by content highlighting Abu Dhabi's safety record to address the growing safety concerns (18%, +3pp).</p>
+            </div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-header">
+                <h3 class="metric-title">Decreasing Barriers</h3>
+                <div class="metric-value">1 improving factor</div>
+            </div>
+            <p class="metric-description">Barriers to visitation that have shown improvement over time, representing successful perception changes.</p>
+            
+            <div class="interpretation">
+                <h5>Improving Barriers (Q4 2024):</h5>
+                <ul>
+                    <li><strong>Too Expensive</strong>: 8% (-6pp) believe Abu Dhabi is too expensive</li>
+                </ul>
+            </div>
+            
+            <div class="business-implications">
+                <h5>Business Implications:</h5>
+                <ul>
+                    <li>The substantial decrease in the "Too Expensive" perception (-6pp) indicates successful communication about Abu Dhabi's value proposition and range of accommodation options.</li>
+                    <li>This positive change should be maintained and leveraged in marketing communications.</li>
+                    <li>The fact that only one barrier is showing improvement while several are increasing is concerning and suggests a need for a comprehensive strategy to address negative perceptions.</li>
+                    <li>Resources previously focused on addressing the "Too Expensive" barrier can be redirected to address the increasing barriers, particularly safety concerns and the perception of limited flight connectivity.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>Top Attractions for Armenian Travelers</h2>
+        <div class="section-intro">
+            <p>Understanding the most popular attractions among Armenian travelers provides valuable insights into their preferences and interests, helping to shape targeted marketing strategies and product development.</p>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-header">
+                <h3 class="metric-title">Top 10 Attractions</h3>
+                <div class="metric-value">Last 90 Days</div>
+            </div>
+            <p class="metric-description">The most searched attractions in Abu Dhabi by Armenian travelers based on TripAdvisor data from the past 90 days.</p>
+            
+            <div class="calculation">
+                <h5>How It's Calculated:</h5>
+                <p>Based on TripAdvisor search data, showing the number of times Armenian users searched for information about specific attractions in Abu Dhabi. These numbers represent interest and research activity, not actual visitation numbers.</p>
+            </div>
+            
+            <div class="interpretation">
+                <h5>Search Volume:</h5>
+                <ul>
+                    <li><strong>SeaWorld Yas Island Abu Dhabi</strong>: 954 searches</li>
+                    <li><strong>Sheikh Zayed Grand Mosque Center</strong>: 670 searches</li>
+                    <li><strong>Saadiyat Beach</strong>: 662 searches</li>
+                    <li><strong>The National Aquarium Abu Dhabi</strong>: 450 searches</li>
+                    <li><strong>Louvre Abu Dhabi</strong>: 430 searches</li>
+                    <li><strong>Yas Waterworld Yas Island, Abu Dhabi</strong>: 420 searches</li>
+                    <li><strong>Ferrari World Abu Dhabi</strong>: 412 searches</li>
+                    <li><strong>Yas Mall</strong>: 360 searches</li>
+                    <li><strong>Abu Dhabi Mall</strong>: 356 searches</li>
+                    <li><strong>Warner Bros. World 2016</strong>: 352 searches</li>
+                </ul>
+            </div>
+            
+            <div class="business-implications">
+                <h5>Business Implications:</h5>
+                <ul>
+                    <li>Theme parks and entertainment attractions dominate the top searched destinations, with SeaWorld Yas Island (954 searches) being the most searched attraction by a significant margin.</li>
+                    <li>This indicates a strong interest in family-friendly entertainment experiences among Armenian travelers during their research phase.</li>
+                    <li>Cultural attractions like Sheikh Zayed Grand Mosque (670 searches) and Louvre Abu Dhabi (430 searches) also show significant search interest, suggesting interest in cultural experiences.</li>
+                    <li>Beach destinations like Saadiyat Beach (662 searches) show strong interest, suggesting appeal for beach experiences.</li>
+                    <li>Shopping destinations (Yas Mall, Abu Dhabi Mall) feature prominently in the top 10, indicating shopping is an important activity for Armenian travelers.</li>
+                    <li>The high ranking of water-based attractions (SeaWorld, National Aquarium, Yas Waterworld) suggests that marketing to the Armenian market should prominently feature these types of experiences.</li>
+                </ul>
+            </div>
+            
+            <div class="example">
+                <h5>Strategic Recommendation:</h5>
+                <p>Develop marketing campaigns that highlight Abu Dhabi's family-friendly entertainment options, particularly the Yas Island attractions (SeaWorld, Ferrari World, Yas Waterworld, Warner Bros. World) combined with cultural experiences at Sheikh Zayed Grand Mosque and Louvre Abu Dhabi. Create bundled packages that combine entertainment experiences with beach time at Saadiyat Beach to appeal to the Armenian market's demonstrated interest in both. Consider developing special family packages specifically for the Armenian market, leveraging their strong interest in entertainment attractions.</p>
+            </div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-header">
+                <h3 class="metric-title">Attraction Categories</h3>
+                <div class="metric-value">Interest Analysis</div>
+            </div>
+            <p class="metric-description">Analysis of the types of attractions that generate the most interest among Armenian travelers based on TripAdvisor search patterns.</p>
+            
+            <div class="interpretation">
+                <h5>Category Breakdown:</h5>
+                <ul>
+                    <li><strong>Theme Parks & Entertainment</strong>: 38% of top 20 attraction searches</li>
+                    <li><strong>Beaches & Waterfront</strong>: 22% of top 20 attraction searches</li>
+                    <li><strong>Shopping & Retail</strong>: 18% of top 20 attraction searches</li>
+                    <li><strong>Cultural & Heritage Sites</strong>: 16% of top 20 attraction searches</li>
+                    <li><strong>Nature & Wildlife</strong>: 6% of top 20 attraction searches</li>
+                </ul>
+            </div>
+            
+            <div class="business-implications">
+                <h5>Business Implications:</h5>
+                <ul>
+                    <li>The strong interest in theme parks and entertainment suggests that Armenian travelers are researching family-friendly experiences during their trip planning.</li>
+                    <li>The significant interest in beaches and waterfront attractions indicates that relaxation and leisure experiences are also important to this market.</li>
+                    <li>The relatively high interest in shopping destinations suggests that retail therapy is a primary driver for Armenian travelers, unlike some other markets.</li>
+                    <li>The moderate interest in cultural and heritage sites suggests an opportunity to increase awareness and interest in Abu Dhabi's cultural offerings.</li>
+                    <li>These search patterns can inform content marketing strategies, highlighting the types of attractions that generate the most interest during the research phase.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>Top Accommodations for Armenian Travelers</h2>
+        <div class="section-intro">
+            <p>Analyzing the most viewed accommodations by Armenian travelers provides critical insights into their preferences for location, brand, and property type, helping to inform targeted marketing strategies and partnership opportunities.</p>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-header">
+                <h3 class="metric-title">Top Accommodations</h3>
+                <div class="metric-value">Last 90 Days</div>
+            </div>
+            <p class="metric-description">The most viewed accommodations in Abu Dhabi by Armenian travelers based on TripAdvisor page view data from the past 90 days.</p>
+            
+            <div class="calculation">
+                <h5>How It's Calculated:</h5>
+                <p>Based on TripAdvisor page view data, showing the number of times Armenian users viewed specific accommodation pages for Abu Dhabi properties. These numbers represent research activity during the trip planning phase, not actual bookings.</p>
+            </div>
+            
+            <div class="interpretation">
+                <h5>Page View Volume:</h5>
+                <ul>
+                    <li><strong>Khalidiya Palace Rayhaan by Rotana</strong>: 1,902 page views</li>
+                    <li><strong>Rixos Marina Abu Dhabi</strong>: 1,832 page views</li>
+                    <li><strong>Al Raha Beach Resort & Spa</strong>: 1,214 page views</li>
+                    <li><strong>Le Méridien Abu Dhabi</strong>: 1,110 page views</li>
+                    <li><strong>Radisson Blu Hotel & Resort, Abu Dhabi Corniche</strong>: 938 page views</li>
+                    <li><strong>Traders Hotel, Qaryat Al Beri, Abu Dhabi</strong>: 844 page views</li>
+                    <li><strong>Saadiyat Rotana Resort & Villas</strong>: 722 page views</li>
+                    <li><strong>Beach Rotana</strong>: 696 page views</li>
+                    <li><strong>InterContinental Abu Dhabi, an IHG Hotel</strong>: 668 page views</li>
+                    <li><strong>Sheraton Abu Dhabi Hotel & Resort</strong>: 656 page views</li>
+                </ul>
+            </div>
+            
+            <div class="business-implications">
+                <h5>Business Implications:</h5>
+                <ul>
+                    <li>Upper-upscale properties dominate the top viewed accommodations, with Khalidiya Palace Rayhaan by Rotana (1,902 views) and Rixos Marina Abu Dhabi (1,832 views) receiving significantly more views than other properties.</li>
+                    <li>Beachfront and waterfront properties are particularly popular, with 7 of the top 10 properties offering beach or waterfront access.</li>
+                    <li>International chain hotels dominate the list, suggesting brand recognition and international standards are important to Armenian travelers.</li>
+                    <li>Rotana properties feature prominently (3 in the top 10), suggesting strong brand recognition or preference among Armenian travelers.</li>
+                    <li>The high page view numbers for upper-upscale rather than luxury properties suggests Armenian travelers may be seeking good value in the premium segment rather than ultra-luxury experiences.</li>
+                    <li>The strong preference for beachfront and waterfront properties aligns with the high interest in beach attractions seen in the attractions data.</li>
+                </ul>
+            </div>
+            
+            <div class="example">
+                <h5>Strategic Recommendation:</h5>
+                <p>Develop co-marketing campaigns with Rotana and other international hotel chains that have strong presence in the Armenian market, particularly focusing on beachfront and waterfront properties. Create special packages that highlight the proximity of these properties to top attractions like SeaWorld Yas Island, Sheikh Zayed Grand Mosque, and Saadiyat Beach. Consider developing dedicated marketing materials for the Armenian market that showcase the upper-upscale segment, emphasizing value and international standards rather than ultra-luxury positioning.</p>
+            </div>
+        </div>
+        
+        <div class="metric-card">
+            <div class="metric-header">
+                <h3 class="metric-title">Accommodation Categories</h3>
+                <div class="metric-value">Interest Analysis</div>
+            </div>
+            <p class="metric-description">Analysis of the types of accommodations that generate the most interest among Armenian travelers based on TripAdvisor search patterns.</p>
+            
+            <div class="interpretation">
+                <h5>Category Breakdown:</h5>
+                <ul>
+                    <li><strong>Upper-Upscale Hotels</strong>: 48% of top 20 accommodation searches</li>
+                    <li><strong>Upscale Hotels</strong>: 26% of top 20 accommodation searches</li>
+                    <li><strong>Luxury Hotels</strong>: 18% of top 20 accommodation searches</li>
+                    <li><strong>Midscale Hotels</strong>: 8% of top 20 accommodation searches</li>
+                </ul>
+            </div>
+            
+            <div class="business-implications">
+                <h5>Business Implications:</h5>
+                <ul>
+                    <li>The strong preference for upper-upscale properties (48%) suggests Armenian travelers are seeking high-quality accommodations with good amenities but may be more value-conscious than luxury-focused.</li>
+                    <li>The significant interest in upscale properties (26%) further supports this value-oriented premium positioning.</li>
+                    <li>The moderate interest in luxury properties (18%) indicates some segment of the market is interested in high-end experiences.</li>
+                    <li>The limited interest in midscale properties (8%) suggests Armenian travelers to Abu Dhabi are generally seeking premium experiences rather than budget options.</li>
+                    <li>These preferences can inform partnership strategies and promotional offers, focusing on the upper-upscale and upscale segments that generate the most interest.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Conclusion</h2>
+            <p>The Armenia market presents a significant growth opportunity for Abu Dhabi tourism, characterized by strong year-over-year growth rates and a good intent/consideration ratio despite low baseline awareness levels.</p>
+            <p>Key strategic recommendations based on the metrics analysis include:</p>
+            <ul>
+                <li><strong>Awareness Building:</strong> Prioritize awareness campaigns to address the low 36.27% baseline, emphasizing Abu Dhabi's unique cultural and beach experiences that differentiate it from competing destinations.</li>
+                <li><strong>Seasonal Targeting:</strong> Concentrate marketing resources on the May-June period to capture the July-August peak season, accounting for the 42-day booking window.</li>
+                <li><strong>Itinerary Development:</strong> Create compelling 4-5 day itineraries that showcase high-impact experiences aligned with the average 4.3-day length of stay.</li>
+                <li><strong>Barrier Addressing:</strong> Directly address the key barriers to consideration, particularly the perception that "there are other places I would rather visit" (74%) and "there is not much to do there" (27%).</li>
+                <li><strong>Digital Focus:</strong> Emphasize digital media channels given the moderate booking window and need for quick conversion from awareness to booking.</li>
+                <li><strong>Growth Monitoring:</strong> Closely track performance metrics to identify if the market's growth consistency improves as it matures beyond its current 0.58 rating.</li>
+            </ul>
+            <p>With strategic investment and targeted marketing approaches, Armenia has the potential to develop into a valuable source market for Abu Dhabi tourism, building on the strong growth trajectory already established in 2024.</p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <p>© 2025 Research & Insights Unit | Strategic Marketing & Communications | Department of Culture and Tourism – Abu Dhabi</p>
+        </div>
+    </div>
+</body>
+</html>
